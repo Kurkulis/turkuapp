@@ -13,5 +13,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "standard": "^12.0.1"
   }
 }
