@@ -7,6 +7,12 @@ School project for Ohjelmistotuotanto & Mallintaminen course.
 You’ll need to have Node >= 6 and npm >= 5.2 on your machine to use React.
 * [Node](https://nodejs.org/en/) - Version 8.12.0 LTS recommended. (Comes with npm 6.4.1)
 
+This project is written using the JavaScript Standard Style(**OPTIONAL**).
+* [JavaScript Standard Style](https://standardjs.com/index.html#install) - 
+JavaScript style guide, linter, and formatter
+
+You can install it globally, locally or use VSCode Standard extension(recommended).
+
 ### Installing
 
 Clone the repository to your machine and run:
