@@ -18,7 +18,7 @@ class Events extends Component {
                 <h3 className='text-center mb-4'>Events</h3>
                 <div className='row'>
                   {eventList.map(item => (
-                    <Event key={item.id} event={item.name} />
+                    <Event key={item.id} event={item} />
                   ))}
                 </div>
               </React.Fragment>
