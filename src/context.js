@@ -27,8 +27,7 @@ export class Provider extends Component {
         `https://api.turku.fi/linkedevents/v1/event/?start=2018-10-11&end=2018-10-11`
       )
       .then(res => {
-        console.log(res.data.data);
-        this.setState({ eventList: res.data.data });
+        this.setState({ eventList: res.data.data })
       })
       .catch(err => console.log(err));
   }
@@ -42,4 +41,4 @@ export class Provider extends Component {
   }
 }
 
-export const Consumer = Context.Consumer;
+export const Consumer = Context.Consumer

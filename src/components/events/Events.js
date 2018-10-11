@@ -8,6 +8,7 @@ class Events extends Component {
       <Consumer>
         {value => {
           const { eventList } = value
+          console.log(value)
 
           if (eventList === undefined || eventList.length === 0) {
             return <h1>Waiting for the really slow API...</h1>
