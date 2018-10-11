@@ -16,13 +16,13 @@ class Search extends Component {
         `https://api.turku.fi/linkedevents/v1/search/?type=event&q=${this.state.eventTitle}`
       )
       .then(res => {
-        console.log(res);
+        console.log(res.data.data);
         dispatch({
           type: 'SEARCH_EVENTS',
-          payload: res
+          payload: res.data.data
         });
 
-        this.setState({ eventTitle: '' });
+        this.setState({ eventTitle: '', eventDate: '' });
       })
       .catch(err => console.log(err));
   }
