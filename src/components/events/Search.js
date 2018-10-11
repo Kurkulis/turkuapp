@@ -16,7 +16,7 @@ class Search extends Component {
         `https://api.turku.fi/linkedevents/v1/search/?type=event&q=${this.state.eventTitle}`
       )
       .then(res => {
-        console.log(res.data.data);
+        // console.log(res.data.data);
         dispatch({
           type: 'SEARCH_EVENTS',
           payload: res.data.data
