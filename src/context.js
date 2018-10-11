@@ -8,7 +8,7 @@ const reducer = (state, action) => {
     case 'SEARCH_EVENTS':
       return {
         ...state,
-        event_list: action.payload
+        eventList: action.payload
       }
     default:
       return state
