@@ -29,8 +29,6 @@ class Search extends Component {
               payload: res.data.data.length
             })
           }
-    
-          this.setState({ eventTitle: '', eventDate: '' })
           })
           .catch(err => console.log(err))
         } else if (this.state.eventTitle === '') {
@@ -47,8 +45,6 @@ class Search extends Component {
               payload: res.data.data.length
             })
           }
-    
-          this.setState({ eventTitle: '', eventDate: '' })
           })
           .catch(err => console.log(err))
         } else {
@@ -65,11 +61,11 @@ class Search extends Component {
               payload: res.data.data.length
             })
           }
-    
-          this.setState({ eventTitle: '', eventDate: '' })
           })
           .catch(err => console.log(err))
         }
+        this.setState({ eventTitle: '', eventDate: '' })
+          
   }
 
   onTitleChange = e => {
