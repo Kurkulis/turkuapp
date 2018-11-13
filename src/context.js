@@ -25,7 +25,7 @@ export class Provider extends Component {
   componentDidMount() {
     axios
       .get(
-        `https://api.turku.fi/linkedevents/v1/event/?start=${moment().format('YYYY-MM-DD')}`
+        `https://api.turku.fi/linkedevents/v1/event/?start=today`
       )
       .then(res => {
         console.log(res)
