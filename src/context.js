@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import React, { Component } from 'react'
+import axios from 'axios'
+import moment from 'moment'
 
 const Context = React.createContext()
 
@@ -24,9 +25,10 @@ export class Provider extends Component {
   componentDidMount() {
     axios
       .get(
-        `https://api.turku.fi/linkedevents/v1/event/?start=2018-10-11&end=2018-10-11`
+        `https://api.turku.fi/linkedevents/v1/event/?start=${moment().format('YYYY-MM-DD')}`
       )
       .then(res => {
+        console.log(res)
         this.setState({ eventList: res.data.data })
       })
       .catch(err => console.log(err));
