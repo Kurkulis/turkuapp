@@ -17,8 +17,7 @@ class Events extends Component {
           } else {
             return (
               <React.Fragment>
-                <h3 className='text-center mb-4'>Tulokset</h3>
-                <div className='row'>
+                <div className='row mt-5'>
                   {eventList.map(item => (
                     <Event key={item.id} event={item} />
                   ))}
