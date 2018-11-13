@@ -11,7 +11,9 @@ class Events extends Component {
           // console.log(value)
 
           if (eventList === undefined || eventList.length === 0) {
-            return <h1>Waiting for the really slow API...</h1>
+            return <h1>Odota...</h1>
+          } else if (eventList === 0) {
+            return <h1>Ei tuloksia, käytä toista hakutermiä</h1>
           } else {
             return (
               <React.Fragment>
