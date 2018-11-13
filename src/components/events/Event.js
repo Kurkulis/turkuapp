@@ -19,7 +19,7 @@ const Event = props => {
       <div className='card mb-4 shadow-sm'>
         <div className='card-body'>
           {eventImage}
-          <h5>{event.name.fi}</h5>
+          <h5 className='mt-4'>{event.name.fi}</h5>
           <p>{eventDate}</p>
           <Link
             to={`events/event/${event.id}`}

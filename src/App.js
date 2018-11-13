@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import Index from './components/layout/index'
-import Event from './components/layout/event'
+import Event from './components/layout/eventPage'
 
 import './App.css'
 

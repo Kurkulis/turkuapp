@@ -27,7 +27,6 @@ export class Provider extends Component {
         `https://api.turku.fi/linkedevents/v1/event/?start=today`
       )
       .then(res => {
-        console.log(res)
         this.setState({ eventList: res.data.data })
       })
       .catch(err => console.log(err));
