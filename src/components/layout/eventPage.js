@@ -12,7 +12,8 @@ export default class Event extends Component {
       description: '',
       startDate: '',
       endDate: '',
-      image: ''
+      image: '',
+      location: ''
     }
   }
 
@@ -29,7 +30,18 @@ export default class Event extends Component {
           description: res.data.description,
           image: res.data.images[0]
         })
+      })
+      .catch(err => console.log(err))
+
+    axios
+      .get(
+        `https://api.turku.fi/linkedevents/v1/place/1000${this.props.match.params.id}/`
+      )
+      .then(res => {
         console.log(res.data)
+        this.setState({
+          location: res.data.street_address
+        })
       })
       .catch(err => console.log(err))
   }
@@ -39,6 +51,7 @@ export default class Event extends Component {
     let endDate = moment(this.state.endDate).format('llll')
     let description = this.state.description ? this.state.description.fi : ''
     let image = this.state.image ? this.state.image.url : placeholder
+    let location = this.state.location ? this.state.location.fi : ''
 
     return (
       <React.Fragment>
@@ -49,9 +62,9 @@ export default class Event extends Component {
           </Link>
           <h1 className='text-danger mb-3'>{this.state.name}</h1>
           <p className='text-danger mb-3'>{startDate} <strong>-</strong> {endDate}</p>
+          <p className='text-danger mb-3'>{location}</p>
           <div dangerouslySetInnerHTML={{ __html: description }} />
         </div>
-
       </React.Fragment>
     )
   }

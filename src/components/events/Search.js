@@ -64,8 +64,9 @@ class Search extends Component {
           })
           .catch(err => console.log(err))
         }
-        this.setState({ eventTitle: '', eventDate: '' })
-          
+
+        this.setState({ eventTitle: '', eventDate: '' })  
+        
   }
 
   onTitleChange = e => {
