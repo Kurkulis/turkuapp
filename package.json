@@ -2,7 +2,7 @@
   "name": "turkuapp",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://kurkulis.github.io/turkuapp",
+  "homepage": "https://kurkulis.github.io/turkuapp/",
   "dependencies": {
     "axios": "^0.18.0",
     "gh-pages": "^2.0.1",
