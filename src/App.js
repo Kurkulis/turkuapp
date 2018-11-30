@@ -12,7 +12,7 @@ export default class App extends Component {
   render () {
     return (
       <Provider>
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <div className='container'>
             <Switch>
               <Route exact path='/' component={Index} />
